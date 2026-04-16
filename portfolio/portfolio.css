@@ -61,13 +61,24 @@ nav .links a:not(:last-child) span:hover::after {
 
 /* SECTION-INTRO */
 
+@keyframes movingGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .section-intro {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 20px 20px;
-
 }
 
 .section-intro .intro {
@@ -96,11 +107,20 @@ nav .links a:not(:last-child) span:hover::after {
 .section-intro .intro .btn-1 {
     padding: 10px 20px;
     text-decoration: none;
-    background-color: rgba(42, 41, 41, 0.673);
     border-radius: 6px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 18px;
     margin: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgb(0, 0, 0);
+    display: inline-block;
+}
+
+.section-intro .intro .btn-1:hover {
+    background-color: rgba(42, 41, 41, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 .section-about {
