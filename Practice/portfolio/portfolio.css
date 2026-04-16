@@ -1,0 +1,101 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #585858cd;
+}
+
+nav .links a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    position: relative;
+    left: 10%;
+}
+
+nav .links a:last-child {
+    background-color: #2c2b2bcd;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    left: 20%
+}
+
+nav .links span {
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+nav .links a:not(:last-child) span {
+    position: relative;
+    display: inline-block;
+}
+
+nav .links a:not(:last-child) span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav .links a:last-child:hover {
+    background-color: #2c2b2b;
+}
+
+nav .links a:not(:last-child) span:hover::after {
+    width: 100%;
+}
+
+
+/* SECTION-INTRO */
+
+.section-intro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-intro .intro {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.section-intro .intro p {
+    max-width: 800px;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.section-intro .intro h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.section-intro .intro h3 {
+    font-size: 24px;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.section-intro .intro .btn-1 {
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: rgba(42, 41, 41, 0.673);
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    margin: 8px;
+}
