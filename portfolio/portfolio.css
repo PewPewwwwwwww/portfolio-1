@@ -62,9 +62,12 @@ nav .links a:not(:last-child) span:hover::after {
 /* SECTION-INTRO */
 
 .section-intro {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
+    padding: 20px 20px;
+
 }
 
 .section-intro .intro {
@@ -99,3 +102,109 @@ nav .links a:not(:last-child) span:hover::after {
     font-size: 18px;
     margin: 8px;
 }
+
+.section-about {
+    padding: 100px 50px;
+    margin-left: 100px;
+}
+
+.section-about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.section-about h1 {
+    width: 40%;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.section-about p {
+    width: 45%;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.aboutme-img {
+    float: right;
+    margin-top: -520px;
+    padding: 0 80px;
+}
+
+.aboutme-img img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 26px;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 860px;
+    width: 100%;
+}
+
+.section-techstack {
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.badge-raw {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge-raw .badge-all {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background-color: #1a1a1acd;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    cursor: default;
+    transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge-raw .badge-all:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 10px var(--glow-color), 0 4px 14px rgba(0,0,0,0.5);
+}
+
+/* Per-badge accent colors */
+.badge-all.b-php    { --accent: #0464e9; --glow-color: rgba(136,146,191,0.4); }
+.badge-all.b-mysql  { --accent: #da9307; --glow-color: rgba(0,117,143,0.4); }
+.badge-all.b-js     { --accent: #F7DF1E; --glow-color: rgba(247,223,30,0.4); }
+.badge-all.b-css    { --accent: #264DE4; --glow-color: rgba(38,77,228,0.4); }
+.badge-all.b-html   { --accent: #f23a07; --glow-color: rgba(227,79,38,0.4); }
+.badge-all.b-vscode { --accent: #007ACC; --glow-color: rgba(0,122,204,0.4); }
+.badge-all.b-infinityfree { --accent: #00C853; --glow-color: rgba(0,200,83,0.4); }
+.badge-all.b-figma  { --accent: #A259FF; --glow-color: rgba(162,89,255,0.4); }
+.badge-all.b-nodejs  { --accent: #339933; --glow-color: rgba(51,153,51,0.4); }
+.badge-all.b-pawn  { --accent: #916108; --glow-color: rgba(185, 129, 7, 0.4); }
+.badge-all.b-windows  { --accent: #0bf5d6; --glow-color: rgba(3, 188, 195, 0.4); }
+.badge-all.b-git  { --accent: #f97a03; --glow-color: rgba(217, 189, 2, 0.4); }
+.badge-all.b-github { --accent: #0e0d0e; --glow-color: rgba(36, 37, 36, 0.4); }
+.badge-all.b-visualstudio { --accent: #f106f1; --glow-color: rgba(160, 29, 204, 0.4); }
+
+/* SECTION-ABOUT
+
+/* .rectangle {
+    width: 100%;
+    height: 5px;
+    background-color: #585858;
+    margin: 20px auto;
+} */
