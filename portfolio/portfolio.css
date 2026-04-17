@@ -2,13 +2,30 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    background: transparent !important;
 }
+
+#bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            background: #050a14;
+        }
 
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #585858cd;
+    padding: 0.9rem 2rem;
+}
+
+nav .my-name {
+    color: #38bdf8;
+    text-shadow: 0 0 18px rgba(56,189,248,0.45);
 }
 
 nav .links a {
@@ -46,18 +63,18 @@ nav .links a:not(:last-child) span::after {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: white;
+    background-color: rgb(19, 158, 193);
     transition: width 0.3s ease;
 }
 
 nav .links a:last-child:hover {
-    background-color: #2c2b2b;
+    background-color: #0ea5e9;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
 }
 
 nav .links a:not(:last-child) span:hover::after {
     width: 100%;
 }
-
 
 /* SECTION-INTRO */
 
@@ -90,16 +107,18 @@ nav .links a:not(:last-child) span:hover::after {
     max-width: 800px;
     padding: 20px;
     margin-top: 5px;
+    color: #94a3b8;
 }
 
 .section-intro .intro h1 {
     font-size: 36px;
     margin-bottom: 5px;
+    color: #94a3b8;
 }
 
 .section-intro .intro h3 {
     font-size: 24px;
-    color: #000000;
+    color : #38bdf8;
     margin-top: 10px;
     margin-bottom: 5px;
 }
@@ -108,16 +127,16 @@ nav .links a:not(:last-child) span:hover::after {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 6px;
-    color: rgb(0, 0, 0);
+    color : #38bdf8;
     font-size: 18px;
     margin: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(8, 101, 163);
     display: inline-block;
 }
 
 .section-intro .intro .btn-1:hover {
-    background-color: rgba(42, 41, 41, 1);
+    background-color: #0ea5e9;
     transform: translateY(-2px);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
     color: white;
@@ -131,12 +150,15 @@ nav .links a:not(:last-child) span:hover::after {
 .section-about h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    color: #94a3b8;
 }
 
 .section-about h1 {
     width: 40%;
     font-size: 28px;
     margin-bottom: 20px;
+    text-shadow: 0 0 12px rgba(56,189,248,0.35);
+    color : #38bdf8;
 }
 
 .section-about p {
@@ -145,6 +167,7 @@ nav .links a:not(:last-child) span:hover::after {
     line-height: 1.6;
     margin-bottom: 20px;
     font-weight: 500;
+    color: #94a3b8;
 }
 
 .aboutme-img {
@@ -158,6 +181,12 @@ nav .links a:not(:last-child) span:hover::after {
     height: 500px;
     object-fit: cover;
     border-radius: 26px;
+    transition: 0.8s ease, box-shadow 0.3s ease ;
+}
+
+.aboutme-img img:hover{
+    box-shadow: 0 0 20px rgba(56,189,248,0.5);
+
 }
 
 .badge {
@@ -173,6 +202,20 @@ nav .links a:not(:last-child) span:hover::after {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.section-techstack h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #94a3b8;
+}
+
+.section-techstack p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #94a3b8;
 }
 
 .badge-raw {
@@ -205,20 +248,31 @@ nav .links a:not(:last-child) span:hover::after {
 }
 
 /* Per-badge accent colors */
-.badge-all.b-php    { --accent: #0464e9; --glow-color: rgba(136,146,191,0.4); }
-.badge-all.b-mysql  { --accent: #da9307; --glow-color: rgba(0,117,143,0.4); }
-.badge-all.b-js     { --accent: #F7DF1E; --glow-color: rgba(247,223,30,0.4); }
-.badge-all.b-css    { --accent: #264DE4; --glow-color: rgba(38,77,228,0.4); }
-.badge-all.b-html   { --accent: #f23a07; --glow-color: rgba(227,79,38,0.4); }
-.badge-all.b-vscode { --accent: #007ACC; --glow-color: rgba(0,122,204,0.4); }
-.badge-all.b-infinityfree { --accent: #00C853; --glow-color: rgba(0,200,83,0.4); }
-.badge-all.b-figma  { --accent: #A259FF; --glow-color: rgba(162,89,255,0.4); }
-.badge-all.b-nodejs  { --accent: #339933; --glow-color: rgba(51,153,51,0.4); }
-.badge-all.b-pawn  { --accent: #916108; --glow-color: rgba(185, 129, 7, 0.4); }
-.badge-all.b-windows  { --accent: #0bf5d6; --glow-color: rgba(3, 188, 195, 0.4); }
-.badge-all.b-git  { --accent: #f97a03; --glow-color: rgba(217, 189, 2, 0.4); }
-.badge-all.b-github { --accent: #0e0d0e; --glow-color: rgba(36, 37, 36, 0.4); }
-.badge-all.b-visualstudio { --accent: #f106f1; --glow-color: rgba(160, 29, 204, 0.4); }
+    .badge-all.b-php   {--accent: #0464e9; --glow-color: rgba(136,146,191,0.4); }
+    .badge-all.b-mysql  { --accent: #da9307; --glow-color: rgba(0,117,143,0.4); }
+    .badge-all.b-js     { --accent: #F7DF1E; --glow-color: rgba(247,223,30,0.4); }
+    .badge-all.b-css    { --accent: #264DE4; --glow-color: rgba(38,77,228,0.4); }
+    .badge-all.b-html   { --accent: #f23a07; --glow-color: rgba(227,79,38,0.4); }
+    .badge-all.b-vscode { --accent: #007ACC; --glow-color: rgba(0,122,204,0.4); }
+    .badge-all.b-infinityfree { --accent: #00C853; --glow-color: rgba(0,200,83,0.4); }
+    .badge-all.b-figma  { --accent: #A259FF; --glow-color: rgba(162,89,255,0.4); }
+    .badge-all.b-nodejs  { --accent: #339933; --glow-color: rgba(51,153,51,0.4); }
+    .badge-all.b-pawn  { --accent: #916108; --glow-color: rgba(185, 129, 7, 0.4); }
+    .badge-all.b-windows  { --accent: #0bf5d6; --glow-color: rgba(3, 188, 195, 0.4); }
+    .badge-all.b-git  { --accent: #f97a03; --glow-color: rgba(217, 189, 2, 0.4); }
+    .badge-all.b-github { --accent: #4d4d4d; --glow-color: rgba(62, 61, 61, 0.4); }
+    .badge-all.b-visualstudio { --accent: #f106f1; --glow-color: rgba(160, 29, 204, 0.4); }
+
+    
+    .b-php i     { color: #8892be; }
+    .b-nodejs i  { color: #83cd29; }
+    .b-html i    { color: #e34c26; }
+    .b-css i     { color: #264de4; }
+    .b-mysql i   { color: #4479a1; }
+    .b-git i     { color: #f05032; }
+    .b-github i  { color: #e0f2fe; }
+    .b-windows i { color: #00adef; }
+    .b-figma i   { color: #a259ff; }
 
 /* SECTION-ABOUT
 
