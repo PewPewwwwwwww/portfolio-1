@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="portfolio.css">
+    <title>portfolio</title>
+
+    <style>
+        /* ══════════════════════════════════════════
+           BACKGROUND CANVAS
+        ══════════════════════════════════════════ */
+        #bg-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            background: #050a14;
+        }
+
+        /* ══════════════════════════════════════════
+           GLOBAL THEME — dark navy + sky-blue
+        ══════════════════════════════════════════ */
+        :root {
+            --sky:      #38bdf8;
+            --sky-dim:  #7dd3fc;
+            --white:    #e0f2fe;
+            --muted:    #94a3b8;
+            --card-bg:  rgba(10, 20, 40, 0.55);
+            --border:   rgba(56, 189, 248, 0.18);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background: transparent !important;
+            color: var(--white);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+        }
+
+        /* ── NAV ── */
+        header {
+            background: rgba(5, 10, 20, 0.75);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.9rem 2rem;
+        }
+
+        .my-name h1 {
+            color: var(--sky);
+            margin: 0;
+            font-size: 1.4rem;
+            letter-spacing: 0.04em;
+            text-shadow: 0 0 18px rgba(56,189,248,0.45);
+        }
+
+        .links {
+            display: flex;
+            gap: 1.6rem;
+        }
+
+        .links a {
+            color: var(--sky-dim);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.06em;
+            transition: color 0.2s, text-shadow 0.2s;
+        }
+
+        .links a:hover {
+            color: var(--sky);
+            text-shadow: 0 0 10px rgba(56,189,248,0.6);
+        }
+
+        /* ── INTRO SECTION ── */
+        .section-intro {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem;
+        }
+
+        .intro h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: var(--white);
+... (354 lines left)
+
+portfolio.html
+17 KB
